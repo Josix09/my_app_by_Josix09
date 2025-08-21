@@ -1,5 +1,7 @@
 # se importa la libreria tkinter con todas sus funciones
 from tkinter import *
+from tkinter import messagebox
+
 Ventana_principal = Tk()
 
 
@@ -25,6 +27,9 @@ frame_1 = Frame(Ventana_principal)
 frame_1.config(bg="light gray",width=680, height=380)
 frame_1.place(x=10,y=10)
 
-
+#contenido (texto ) ventana principal
+subtitulo1= Label(frame_1, text= "Jorge Luis Silva Morales")
+subtitulo1.config(bg="light gray",fg="Black", font=("Arial",16))
+subtitulo1.place(x=320,y=83)
 
 Ventana_principal.mainloop()
