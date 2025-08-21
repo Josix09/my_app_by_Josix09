@@ -27,6 +27,18 @@ def abrir_toplevel_nacimiento():
 
 
 
+def abrir_toplevel_medico():
+    global toplevel_medico
+    toplevel_medico = Toplevel()
+    toplevel_medico.title("Datos Medicos")
+    toplevel_medico.resizable(False, False)
+    toplevel_medico.geometry("500x200")
+    toplevel_medico.config(bg="light gray")
+
+    subtitulom= Label(toplevel_medico, text= "Tipo de sangre: A+")
+    subtitulom.config(bg="light gray",fg="Black", font=("Arial",12))
+    subtitulom.place(x=5,y=30)
+
 
 
  
@@ -81,8 +93,10 @@ subtitulo4.place(x=40,y=270)
 
 # boton para abrir Toplevel nacimmiento
 bt_nacimiento = Button(frame_1, text="Datos nacimiento", command=abrir_toplevel_nacimiento)
-bt_nacimiento.place(x=105, y=270)
+bt_nacimiento.place(x=40, y=345)
 
+bt_medico = Button(frame_1, text="Datos Médicos", command=abrir_toplevel_medico)
+bt_medico.place(x=40, y=310)
 
 
 Ventana_principal.mainloop()
